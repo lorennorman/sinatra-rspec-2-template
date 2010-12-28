@@ -1,0 +1,13 @@
+ENV['RACK_ENV'] = 'test'
+
+require 'rubygems'
+require 'bundler'
+Bundler.setup
+
+require 'rack/test'
+require 'rspec/expectations'
+require 'capybara/cucumber'
+require_relative '../../app.rb'
+
+Capybara.app = Sinatra::Application
+
